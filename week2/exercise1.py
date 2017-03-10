@@ -13,7 +13,6 @@ jobs = ['get', 'this', 'file', 'to', 'past', 'the', 'linter'
         'file', 'to', 'pass',
         'the', 'linter']
 InOtherWords = "make it show no linter errors"
-
 print(jobs)
 print(InOtherWords)
 print(1+1, "is smaller than", 7*0.5, "is", (1+1) < (7*0.5),
