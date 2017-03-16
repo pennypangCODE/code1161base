@@ -11,6 +11,7 @@ def is_odd(a_number):
     """
 
     return (a_number % 2) != 0
+    pass
 
 
 def fix_it(moves=True, should_move=True):
@@ -40,17 +41,23 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
+    stars = []
+    for x in range(10):
+        stars.append('*')
+
+    return stars
     pass
 
 
 def star_map():
     """Use a map to make stars and bangs.
 
-    Using a map, return a list of 10 items, each one a string with exacly
+    Using a map, return a list of 10 items, each one a string with exactly
     one star in it if the index is odd and exactly one exclamation mark
     if it's even. Reuse the is odd function that you've already written.
     E.g.: ["!", "*", "!", "*", "!", "*", "!", "*", "!", "*"]
     """
+    return list(map(lambda x: '*' if is_odd(x) else '!', range(10)))
     pass
 
 
@@ -62,6 +69,11 @@ def loops_1c(number_of_items=5, symbol="#"):
     a string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
+    symlist = []
+
+    for x in range(number_of_items):
+        symlist.append(symbol)
+    return symlist
     pass
 
 
@@ -83,6 +95,13 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
+    columns = []
+    for x in range(10):
+        rows = []
+        for y in range(10):
+            rows.append('*')
+        columns.append(rows)
+    return columns
     pass
 
 
@@ -107,6 +126,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
+    columns = []
+    for i in range(10):
+        rows = []
+        for j in range(10):
+            rows.append(str(i))
+        columns.append(rows)
+    return columns
     pass
 
 
@@ -125,6 +151,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
+    columns = []
+    for x in range(10):
+        rows = []
+        for y in range(10):
+            rows.append(str(y))
+        columns.append(rows)
+    return columns
     pass
 
 
@@ -150,6 +183,14 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
+
+    columns = []
+    for x in range(10):
+        rows = []
+        for y in range(5):
+            rows.append('(i' + str(x) + ', j' + str(y) + ')')
+        columns.append(rows)
+    return columns
     pass
 
 
@@ -173,6 +214,13 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
+    columns = []
+    for x in range(10):
+        rows = []
+        for y in range(x + 1):
+            rows.append(str(y))
+        columns.append(rows)
+    return columns
     pass
 
 
@@ -197,6 +245,9 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
+    columns = []
+        for x in range(5):
+            
     pass
 
 
