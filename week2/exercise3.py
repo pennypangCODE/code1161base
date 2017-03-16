@@ -9,7 +9,8 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    pass
+
+    return (a_number % 2) != 0
 
 
 def fix_it(moves=True, should_move=True):
@@ -23,6 +24,12 @@ def fix_it(moves=True, should_move=True):
     "Duct Tape"
     "No Problem"
     """
+    if moves == should_move:
+        return "No Problem"
+    elif moves:
+        return "Duct Tape"
+    else:
+        return "WD-40"
     pass
 
 
