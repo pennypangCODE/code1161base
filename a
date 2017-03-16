@@ -1,0 +1,267 @@
+[33mcommit c4c425df7343a71d34cec9bbc6c1e38a32c86175[m
+Author: Danielle <danielle.bisazza@gmail.com>
+Date:   Sat Mar 4 18:44:52 2017 +1100
+
+    Add two new files created from pytest
+
+[33mcommit cf22c65bb08d0d17c3b1804b3db558d5c71a9ebe[m
+Author: dbisazza <danielle.bisazza@gmail.com>
+Date:   Fri Mar 3 10:58:26 2017 +1100
+
+    Changed 'About Me' to be about me instead
+
+[33mcommit 3401d9c31cf6ef5fb3b52c5fe0a030caaa7ead2a[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Thu Mar 2 10:52:02 2017 +1100
+
+    remove answers from exercises, close #16
+
+[33mcommit fbb58140f5db354e1939f8083cbe86d8f6316b18[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Feb 28 17:36:15 2017 +1100
+
+    fix some linting issues
+
+[33mcommit 375421eece69ae085338ec01144310f913206c18[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Feb 28 17:35:55 2017 +1100
+
+    add placeholder for a mugshot
+
+[33mcommit 0f9d5958cd7b8c26dfb08c038e9134a0463faf75[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Wed Feb 22 14:41:23 2017 +1100
+
+    add to this repo
+
+[33mcommit 41903ada24de4122d94c5e8451af132630b1e2fe[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Wed Feb 22 14:41:00 2017 +1100
+
+    change imports for new linters
+
+[33mcommit 21f515cc3213eb9f3cf4fd097e666d280b6a4a57[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Wed Feb 22 14:40:09 2017 +1100
+
+    add docstrings to pass stricter linting
+
+[33mcommit 72143edc5cdddb15f20e1b87b33e9455b5719669[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Sat Feb 18 12:04:56 2017 +1100
+
+    tidy up, close #7
+
+[33mcommit 0419cb03a70b6cc08f0b245b68398df39ff4b405[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Feb 14 21:57:00 2017 -0800
+
+    add some descriptions for #7
+
+[33mcommit 9dc513c94b21440f77bf86b9ffc400e46419015a[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Feb 14 21:27:21 2017 -0800
+
+    finish template, close #1
+
+[33mcommit b1815bd1a194a788909a835935857f5d2c63fa7f[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Fri Feb 10 16:27:35 2017 -0800
+
+    fix up after test changes
+
+[33mcommit 85ff21a55973d49f9f2e0faa7349ea1e87b68a0b[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Fri Feb 10 15:50:12 2017 -0800
+
+    make test arg optional
+
+[33mcommit 3aa5bee152284822a282814f00ac1443e6e2de9a[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Fri Feb 10 15:40:31 2017 -0800
+
+    initial automatic marking
+
+[33mcommit 2d35d8ea5a6d21d360b6adb5a11b922d6391e24d[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Fri Feb 10 12:01:03 2017 -0800
+
+    make future compatible
+
+[33mcommit 3ff560afa17a07aa28d1a2c3cafbb2697fd9bc29[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Fri Feb 10 12:00:43 2017 -0800
+
+    match formattign to test
+
+[33mcommit 19e55d753cbe0818ff0244651b3f1886109127ef[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Thu Feb 9 14:41:37 2017 -0800
+
+    the spell of success
+
+[33mcommit a6824d6d6d6b43c2675df06e405e8b97e45a15fb[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Feb 7 14:51:48 2017 -0800
+
+    tweak formatting
+
+[33mcommit 7c35b91780dc0ba239c9e8e751288afe3c4bc6ad[m
+Author: Ben <ben@notionparallax.co.uk>
+Date:   Tue Feb 7 14:45:40 2017 -0800
+
+    more
+
+[33mcommit 86905279ead7eda1f147fc73fc1b9ec5658e073b[m
+Author: Ben <ben@notionparallax.co.uk>
+Date:   Tue Feb 7 14:41:14 2017 -0800
+
+    First
+
+[33mcommit bd26bbc839d4e5fbfce6a76a5d3d4c8fe3c826d3[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Feb 7 10:58:27 2017 -0800
+
+    week 4 complete first draft
+
+[33mcommit ad0bb80edc0e61ff723d9f13447a179d6592c4a1[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Feb 7 09:21:49 2017 -0800
+
+    re-enable hist
+
+[33mcommit 5ffb6129434a587d93dd3edb1f5a563cce11ce4e[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Feb 7 09:17:09 2017 -0800
+
+    remove unused imports
+
+[33mcommit cf82711c595f0fef085d54a595ebf37c3666a576[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Feb 7 09:16:32 2017 -0800
+
+    fill in w2 ex3
+
+[33mcommit c410f63fa36f9b2f62a89f586a7a5831b14a08ff[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Feb 7 08:32:58 2017 -0800
+
+    test ishaan's proposal
+
+[33mcommit d858cebcfc2a9df38441ad9c7494c619a90590c0[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Mon Feb 6 20:13:54 2017 -0800
+
+    more progress on week 4
+
+[33mcommit c7cb83210fe0dccba9e8bed43cdce3789f36a274[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Mon Feb 6 19:55:12 2017 -0800
+
+    start on w4 ex
+
+[33mcommit 6f37174f09d3c4c82f7a2dd7397710c5a70a5ded[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Mon Feb 6 11:12:10 2017 -0800
+
+    complete example week 3 exercises
+
+[33mcommit 3a01641b532cc93d38eb00bae6c60e3e01cac6fc[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Sat Feb 4 17:22:30 2017 -0800
+
+    a start on ex4 - binary search
+
+[33mcommit 2f3185ab9615bfadad53ac8d2b87c231e1bae889[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Sat Feb 4 16:45:29 2017 -0800
+
+    weeks 2 and 3 exercises nearly finished
+
+[33mcommit df4b30d16a7b71224c7eef6d3ecddc0101bfab33[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Sat Feb 4 12:15:14 2017 -0800
+
+    exercises for week 2
+
+[33mcommit 673f802247db80f9e2c485407be7736f3d44210a[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Sat Feb 4 10:46:46 2017 -0800
+
+    write exercises for w2, move binary search to w3
+
+[33mcommit 4cd8db6b1ecad981dc3d9b5636b0c27c72b265ec[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Fri Feb 3 10:42:19 2017 -0800
+
+    remove cruft
+
+[33mcommit 821d84450ac99a85598f0192ca878e83a0d7f574[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Fri Feb 3 10:39:05 2017 -0800
+
+    stub out weeks
+
+[33mcommit ece987525009d8d43a2481b2f360517a1387b84d[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Fri Feb 3 10:38:26 2017 -0800
+
+    refactor test helpers into own file
+
+[33mcommit 83d8f2d8df7a4065a159a868227068c93fc4e366[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Wed Feb 1 15:48:59 2017 -0800
+
+    week one
+
+[33mcommit 47c0b2c8293fc34f11182a3175c77e3833e77930[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Jan 31 19:40:35 2017 -0800
+
+    better feedback
+
+[33mcommit e4a65ee3ccd7350878b3410f43fe2bf0193ddcdc[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Jan 31 19:15:17 2017 -0800
+
+    week 2 exercise files
+
+[33mcommit 7fb54d0afc1009e4e8d291e6cad96265c5043e9b[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Tue Jan 31 19:14:18 2017 -0800
+
+    ignore the pyc files
+
+[33mcommit 0352c2cbce36209108db52af7f1c344729acfd18[m
+Author: Ben <ben@notionparallax.co.uk>
+Date:   Mon Jan 30 17:13:29 2017 -0800
+
+    add a comment
+
+[33mcommit 733d9d27efbd5221ba00e27ea284910a5624cd74[m
+Author: Ben Doherty <ben@notionparallax.co.uk>
+Date:   Mon Jan 30 15:44:41 2017 -0800
+
+    add more data and todo
+
+[33mcommit 84862111f59a22897f980a41923445192a5228df[m
+Author: Ben <ben@notionparallax.co.uk>
+Date:   Mon Jan 30 12:15:59 2017 -0800
+
+    very basic start
+
+[33mcommit b81c7fb1e3e24fd196bd838e00ae8091da8baca5[m
+Author: Ben <ben@notionparallax.co.uk>
+Date:   Mon Jan 30 12:14:16 2017 -0800
+
+    fix headmatter
+    
+    _must_ be at the top of the file
+
+[33mcommit 1a2f5242c2c845313c1b5f4de93af03b6482e366[m
+Author: Ben <ben@notionparallax.co.uk>
+Date:   Mon Jan 30 12:13:07 2017 -0800
+
+    first
+    
+    getting started with this repo
