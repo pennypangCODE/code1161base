@@ -287,6 +287,7 @@ def loops_7():
             isPointOnPyramid(i, j)
         column.append(row)
 
+    print(column)
     return column
     pass
 
