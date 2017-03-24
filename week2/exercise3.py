@@ -9,7 +9,8 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    pass
+
+    return(a_number % 2 != 0)
 
 
 def fix_it(moves=True, should_move=True):
@@ -23,7 +24,17 @@ def fix_it(moves=True, should_move=True):
     "Duct Tape"
     "No Problem"
     """
-    pass
+
+    if moves:
+            if should_move:
+                return("No Problem")
+            else:
+                return("Duct Tape")
+    elif not moves:
+            if should_move:
+                return("WD-40")
+            else:
+                return("No Problem")
 
 
 def loops_1a():
@@ -33,7 +44,9 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    pass
+
+    Stars = ['*'] * 10
+    return(Stars)
 
 
 def star_map():
@@ -44,6 +57,16 @@ def star_map():
     if it's even. Reuse the is odd function that you've already written.
     E.g.: ["!", "*", "!", "*", "!", "*", "!", "*", "!", "*"]
     """
+
+    def star_or_bang(a_number):
+        if is_odd(a_number):
+            return "*"
+        else:
+            return "!"
+
+    result = []
+    result = map(star_or_bang, range(10))
+    return result
     pass
 
 
@@ -55,6 +78,11 @@ def loops_1c(number_of_items=5, symbol="#"):
     a string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
+    gh = []
+
+    for x in range(number_of_items):
+        gh.append(symbol)
+    return gh
     pass
 
 
@@ -76,7 +104,14 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    pass
+
+    starmaps = []
+    for x in range(10):
+        rows = []
+        for y in range(10):
+                rows.append('*')
+        starmaps.append(rows)
+    return starmaps
 
 
 def loops_3():
@@ -100,6 +135,14 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
+    gist = []
+    for i in range(10):
+        rows = []
+        for j in range(10):
+            rows.append(str(i))
+        gist.append(rows)
+    return gist
+
     pass
 
 
@@ -118,6 +161,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
+    gist2 = []
+    for x in range(10):
+        rows = []
+        for y in range(10):
+            rows.append(str(y))
+        gist2.append(rows)
+    return gist2
     pass
 
 
@@ -143,7 +193,16 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    pass
+    gist3 = []
+    for x in range(10):
+        rows = []
+        for y in range(5):
+            rows.append('(i' + str(x) + ', j' + str(y) + ')')
+        gist3.append(rows)
+    return gist3
+
+
+pass
 
 
 def loops_6():
@@ -166,7 +225,16 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    pass
+    gist4 = []
+    for x in range(10):
+        rows = []
+        for y in range(x + 1):
+            rows.append(str(y))
+        gist4.append(rows)
+    return gist4
+
+
+pass
 
 
 def loops_7():
@@ -190,6 +258,19 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
+    gist5mate = []
+    for x in range(5):
+        rows = []
+        for y in range(9):
+            if abs(y-4) <= x:
+                rows.append('*')
+            else:
+                rows.append(' ')
+        gist5mate.append(rows)
+
+    print (gist5mate)
+    return gist5mate
+
     pass
 
 
