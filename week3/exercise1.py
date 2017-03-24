@@ -63,7 +63,6 @@ def gene_krupa_range(start, stop, even_step, odd_step):
         count += 1
 
     return numberList
-    pass
 
 
 def stubborn_asker(low, high):
@@ -92,7 +91,6 @@ def not_number_rejector(message):
     "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    message = "Type a number:"
 
     while True:
         try:

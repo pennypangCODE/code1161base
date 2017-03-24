@@ -5,7 +5,6 @@ Steps on the way to making your own guessing game.
 from __future__ import division
 from __future__ import print_function
 from exercise1 import not_number_rejector
-from exercise1 import super_asker
 import random
 
 
@@ -28,7 +27,40 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
-    pass
+    print("\nwelcome to the guessing game!")
+    print("A number between _ and _ ?")
+    lowerBound = not_number_rejector("Enter a lower bound: ")
+    upperBound = not_number_rejector("Enter a upper bound: ")
+
+    while lowerBound >= upperBound:
+        print("no")
+        upperBound = not_number_rejector("Enter another upper bound: ")
+
+    print("OK then, a number between {} and {} ?".format(lowerBound,
+                                                         upperBound))
+    upperBound = int(upperBound)
+    lowerBound = int(lowerBound)
+    actualNumber = random.randint(lowerBound, upperBound)
+
+    guessed = False
+
+    while not guessed:
+        try:
+            guessedNumber = int(raw_input("guess a number: "))
+            print("{} is valid".format(guessedNumber))
+            if (lowerBound <= guessedNumber) and (guessedNumber <= upperBound):
+                if guessedNumber == actualNumber:
+                    print("you got it!! It was {}".format(actualNumber))
+                    guessed = True
+                elif guessedNumber < actualNumber:
+                    print("too small, try again ")
+                else:
+                    print("too big, try again   ")
+            else:
+                print("{} is not in the bound".format(guessed))
+        except Exception as e:
+            print("Try again ({})".format(e))
+    return "You got it!"
 
 
 if __name__ == "__main__":
