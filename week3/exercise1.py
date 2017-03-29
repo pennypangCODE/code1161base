@@ -120,7 +120,7 @@ def super_asker(low, high):
                     print("{} is right.".format(input_number))
                     return input_number
             else:
-                print("Sorry, {input} is out of range".format(input=input_number))
+                print("{input} is out of range".format(input=input_number))
         except Exception as e:
             print ("try again, that's not a number ({})".format(e))
     pass

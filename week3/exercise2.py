@@ -13,7 +13,6 @@ def exampleGuessingGame():
     This is an example guessing game. It'll test as an example too.
     """
     print("\nwelcome to the guessing game!")
-    print("A number between 0 and _ ?")
     upperBound = raw_input("Enter an upper bound: ")
     print("OK then, a number between 0 and {} ?".format(upperBound))
     upperBound = int(upperBound)
@@ -31,7 +30,7 @@ def exampleGuessingGame():
         elif guessedNumber < actualNumber:
             print("too small, try again ")
         else:
-            print("too big, try again   ")
+            print("too big, try again")
     return "You got it!"
 
 
