@@ -25,10 +25,10 @@ def success_is_relative():
     TIP: check that there ins't unwanted whitespace or line endings in the
          response. Look into .strip() and see what it does.
     """
-    # this depends on excecution context. Take a look at your CWD and remember
-    # that it changes.
-    # print(path, CWD)
-    pass
+
+    f = open("week1/pySuccessMessage.json", "r")
+    return(f.read().strip())
+    f.close()
 
 
 def get_some_details():
@@ -50,9 +50,14 @@ def get_some_details():
     json_data = open(LOCAL + "/lazyduck.json").read()
 
     data = json.loads(json_data)
-    return {"lastName":       None,
-            "password":       None,
-            "postcodePlusID": None
+    path = data["results"][0]
+
+    postcode = path["location"]["postcode"]
+    ID = path["id"]["value"]
+
+    return {"lastName":       path["name"]["last"],
+            "password":       path["login"]["password"],
+            "postcodePlusID": int(postcode) + int(ID)
             }
 
 
@@ -67,28 +72,42 @@ def wordy_pyramid():
     Return the pyramid as a list of strings.
     I.e. ["cep", "dwine", "tenoner", ...]
     [
-    "cep",
-    "dwine",
-    "tenoner",
-    "ectomeric",
-    "archmonarch",
-    "phlebenterism",
-    "autonephrotoxin",
-    "redifferentiation",
-    "phytosociologically",
-    "theologicohistorical",
-    "supersesquitertial",
-    "phosphomolybdate",
-    "spermatophoral",
-    "storiologist",
-    "concretion",
-    "geoblast",
-    "Nereis",
-    "Leto",
+    "cep", 3
+    "dwine", 5
+    "tenoner", 7
+    "ectomeric", 9
+    "archmonarch", 11
+    "phlebenterism", 13
+    "autonephrotoxin", 15
+    "redifferentiation", 17
+    "phytosociologically", 19
+    "theologicohistorical", 20
+    "supersesquitertial", 18
+    "phosphomolybdate", 16
+    "spermatophoral", 14
+    "storiologist", 12
+    "concretion", 10
+    "geoblast", 8
+    "Nereis", 6
+    "Leto", 4
     ]
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. ?len=
     """
-    pass
+    url = "http://www.setgetgo.com/randomword/get.php?len="
+    pyramid = []
+    lengthWord = 3
+    while lengthWord < 20:
+        res = requests.get(url + str(lengthWord)).text
+        pyramid.append(str(res))
+        lengthWord += 2
+
+    lengthWord = 20
+    while lengthWord >= 4:
+        res = requests.get(url + str(lengthWord)).text
+        pyramid.append(str(res))
+        lengthWord -= 2
+
+    return pyramid
 
 
 def wunderground():
@@ -103,19 +122,19 @@ def wunderground():
          variable and then future access will be easier.
     """
     base = "http://api.wunderground.com/api/"
-    api_key = "YOUR KEY - REGISTER TO GET ONE"
+    api_key = "2f3ab1a5d1c0f62a"
     country = "AU"
     city = "Sydney"
     template = "{base}/{key}/conditions/q/{country}/{city}.json"
     url = template.format(base=base, key=api_key, country=country, city=city)
     r = requests.get(url)
     the_json = json.loads(r.text)
-    obs = the_json['current_observation']
+    obs = the_json["current_observation"]
 
-    return {"state":           None,
-            "latitude":        None,
-            "longitude":       None,
-            "local_tz_offset": None}
+    return {"state":           obs["display_location"]["state"],
+            "latitude":        obs["observation_location"]["latitude"],
+            "longitude":       obs["observation_location"]["longitude"],
+            "local_tz_offset": obs["local_tz_offset"]}
 
 
 def diarist():
@@ -131,7 +150,12 @@ def diarist():
     TIP: remember to commit 'lasers.pew' and push it to your repo, otherwise
          the test will have nothing to look at.
     """
-    pass
+
+    f = open("week4/Trispokedovetiles(laser).gcode", "r").read()
+    count = str(f.count("M10 P1"))
+    f2 = open("week4/lasers.pew", "w").write(count)
+    f.close()
+    f2.close()
 
 
 if __name__ == "__main__":
