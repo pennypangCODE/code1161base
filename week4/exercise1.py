@@ -25,7 +25,6 @@ def success_is_relative():
     TIP: check that there ins't unwanted whitespace or line endings in the
          response. Look into .strip() and see what it does.
     """
-
     f = open("week1/pySuccessMessage.json", "r")
     return(f.read().strip())
     f.close()
@@ -150,7 +149,6 @@ def diarist():
     TIP: remember to commit 'lasers.pew' and push it to your repo, otherwise
          the test will have nothing to look at.
     """
-
     f = open("week4/Trispokedovetiles(laser).gcode", "r").read()
     count = str(f.count("M10 P1"))
     f2 = open("week4/lasers.pew", "w").write(count)
