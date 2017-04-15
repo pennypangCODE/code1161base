@@ -22,13 +22,16 @@ def success_is_relative():
     TIP: remember that it's relative to your excecution context, not this file.
          The tests are run from the code1161base directory, that's the
          excecution context for this test.
-    TIP: check that there ins't unwanted whitespace or line endings in the
+    TIP: check that there isn't unwanted whitespace or line endings in the
          response. Look into .strip() and see what it does.
     """
     # this depends on excecution context. Take a look at your CWD and remember
     # that it changes.
     # print(path, CWD)
-    pass
+
+    fileOpen = open("week1/pySuccessMessage.json", "r")
+    print(fileOpen.read())
+    fileOpen.close()
 
 
 def get_some_details():
@@ -49,10 +52,12 @@ def get_some_details():
     """
     json_data = open(LOCAL + "/lazyduck.json").read()
 
-    data = json.loads(json_data)
-    return {"lastName":       None,
-            "password":       None,
-            "postcodePlusID": None
+    data = json.loads(json_data)  # load converts from string to dictionary
+    return {"lastName":       data["results"][0]["name"]["last"],
+            "password":       data["results"][0]["login"]["password"],
+            "postcodePlusID": data["results"][0]["location"]["postcode"] +
+                              int(data["results"][0]["id"]["value"])
+
             }
 
 
@@ -88,6 +93,9 @@ def wordy_pyramid():
     ]
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. ?len=
     """
+    r = requests.get("http://www.setgetgo.com/randomword/get.php?len=" + str(5))
+    word = r.text # attribute
+    print word()
     pass
 
 
@@ -135,7 +143,9 @@ def diarist():
 
 
 if __name__ == "__main__":
-    print([len(w) for w in wordy_pyramid()])
+    # print([len(w) for w in wordy_pyramid()])
+    # print(get_some_details())
+    # print(wunderground())
+    # print(diarist())
+    success_is_relative()
     print(get_some_details())
-    print(wunderground())
-    print(diarist())
