@@ -24,7 +24,6 @@ def fix_it(moves=True, should_move=True):
     "Duct Tape"
     "No Problem"
     """
-
     if moves:
         if should_move:
             return "No Problem"
@@ -63,7 +62,6 @@ def star_map():
     if it's even. Reuse the is odd function that you've already written.
     E.g.: ["!", "*", "!", "*", "!", "*", "!", "*", "!", "*"]
     """
-
     def oddOrEven(givenNumber):
         if is_odd(givenNumber):
             return "*"
@@ -84,7 +82,6 @@ def loops_1c(number_of_items=5, symbol="#"):
     a string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-
     symbolList = []
     for i in range(number_of_items):
         symbolList.append(symbol)
@@ -270,7 +267,6 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-
     def isPointOnPyramid(i, j):
         if j == 4:
             row.append('*')
