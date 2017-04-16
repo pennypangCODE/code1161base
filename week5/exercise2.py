@@ -86,7 +86,7 @@ def abba(source="abba", guard=3):
 
                    abba
                     to
-               bbaaobaobbba
+               bba aob ao bbba
                     to
     aobaobbbabbaoaaobbbaoaaobaobaobbba
                 and so on...
@@ -97,18 +97,22 @@ def abba(source="abba", guard=3):
         You need to change these substitutions to make it work.
         """
         if letter == "a":
-            return "aobaobbba"
+            return "bba"
         elif letter == "b":
-            return "bbaoaaob"
+            return "aob"
         elif letter == "o":
-            return "oabba"
+            return "oa"
         else:
             return letter
 
     parts = list(source)
     result = map(apply_rules, parts)
-    new_string = " ".join(result)
-    return new_string.replace(' ', '')
+    new_string = "".join(result)
+    guard -= 1
+    if guard > 0:
+        return abba(new_string, guard)
+    else:
+        return new_string
 
 
 def koch(t, order, size):
