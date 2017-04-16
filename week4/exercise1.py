@@ -30,7 +30,7 @@ def success_is_relative():
     # print(path, CWD)
 
     fileOpen = open("week1/pySuccessMessage.json", "r")
-    print(fileOpen.read())
+    return (fileOpen.read().strip())
     fileOpen.close()
 
 
@@ -56,7 +56,7 @@ def get_some_details():
     return {"lastName":       data["results"][0]["name"]["last"],
             "password":       data["results"][0]["login"]["password"],
             "postcodePlusID": data["results"][0]["location"]["postcode"] +
-                              int(data["results"][0]["id"]["value"])
+            int(data["results"][0]["id"]["value"])
 
             }
 
@@ -93,10 +93,22 @@ def wordy_pyramid():
     ]
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. ?len=
     """
-    r = requests.get("http://www.setgetgo.com/randomword/get.php?len=" + str(5))
-    word = r.text # attribute
-    print word()
-    pass
+
+    pyramid = []
+    URL = "http://www.setgetgo.com/randomword/get.php?len="
+
+    for i in range(3, 21, 2):
+        r = requests.get(URL + str(i))
+        word = r.text
+        print(word)
+        pyramid.append(word)
+
+    for j in range(20, 3, -2):
+        r = requests.get(URL + str(j))
+        word = r.text
+        print(word)
+        pyramid.append(word)
+    return pyramid
 
 
 def wunderground():
@@ -111,7 +123,7 @@ def wunderground():
          variable and then future access will be easier.
     """
     base = "http://api.wunderground.com/api/"
-    api_key = "YOUR KEY - REGISTER TO GET ONE"
+    api_key = "c2bc22f1a748d493"
     country = "AU"
     city = "Sydney"
     template = "{base}/{key}/conditions/q/{country}/{city}.json"
@@ -119,11 +131,13 @@ def wunderground():
     r = requests.get(url)
     the_json = json.loads(r.text)
     obs = the_json['current_observation']
+    obs2 = obs['display_location']
 
-    return {"state":           None,
-            "latitude":        None,
-            "longitude":       None,
-            "local_tz_offset": None}
+    return {"state":           obs2['state'],
+            "latitude":        obs['observation_location']['latitude'],
+            "longitude":       obs['observation_location']['longitude'],
+            "local_tz_offset": obs['local_tz_offset']}
+    pass
 
 
 def diarist():
@@ -139,13 +153,22 @@ def diarist():
     TIP: remember to commit 'lasers.pew' and push it to your repo, otherwise
          the test will have nothing to look at.
     """
-    pass
+    inputFile = open('week4/Trispokedovetiles(laser).gcode', 'r')
+    outputFile = open('week4/lasers.pew', 'w')
+
+    count = 0
+
+    for x in inputFile.readlines():
+        if "M10 P1" in x:
+            count = count + 1
+    outputFile.write(str(count))
+    inputFile.close()
+    outputFile.close()
 
 
 if __name__ == "__main__":
-    # print([len(w) for w in wordy_pyramid()])
-    # print(get_some_details())
-    # print(wunderground())
-    # print(diarist())
     success_is_relative()
     print(get_some_details())
+    print([len(w) for w in wordy_pyramid()])
+    print(wunderground())
+    print(diarist())
