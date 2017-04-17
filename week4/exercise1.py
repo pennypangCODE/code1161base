@@ -129,6 +129,7 @@ def wunderground():
     r = requests.get(url)
     the_json = json.loads(r.text)
     obs = the_json["current_observation"]
+    print(the_json)
 
     return {"state":           obs["display_location"]["state"],
             "latitude":        obs["observation_location"]["latitude"],
@@ -151,9 +152,7 @@ def diarist():
     """
     f = open("week4/Trispokedovetiles(laser).gcode", "r").read()
     count = str(f.count("M10 P1"))
-    f2 = open("week4/lasers.pew", "w").write(count)
-    f.close()
-    f2.close()
+    open("week4/lasers.pew", "w").write(count)
 
 
 if __name__ == "__main__":
