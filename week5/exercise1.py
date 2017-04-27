@@ -62,9 +62,16 @@ import math  # log, trig, sqrt
 # It should say something different in the last message.
 def countdown(message, start, stop, completion_message):
     """Countdown to begin the game using loop."""
-    for i in range(start, stop, -1):
-        print(message + str(i))
-    print(completion_message)
+    countdown = []
+    if start > stop:
+        step = -1
+    else:
+        step = 1
+    for i in range(start, stop, step):
+        mess = (message + str(i))
+        countdown.append(mess)
+    countdown.append(completion_message)
+    return countdown
 
 # TRIANGLES
 
