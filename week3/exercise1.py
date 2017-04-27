@@ -81,8 +81,6 @@ def stubborn_asker(low, high):
         else:
             print("{} is not valid".format(input_number))
 
-    pass
-
 
 def not_number_rejector(message):
     """Ask for a number repeatedly until actually given one.
@@ -91,7 +89,6 @@ def not_number_rejector(message):
     "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-
     while True:
         try:
             input_number = int(raw_input(message))
