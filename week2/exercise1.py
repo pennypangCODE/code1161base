@@ -20,6 +20,7 @@ print(1+1, "is smaller than", 7*0.5, "is", (1+1) < (7*0.5),
 
 
 def usefulFunction():
+    """Function."""
     print(os.getcwd())
 
 
