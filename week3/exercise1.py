@@ -12,7 +12,6 @@ def loop_ranger(start, stop=None, step=1):
 
     Do this using any method apart from just using range()
     """
-
     numberlist = []
     robot = start
 
@@ -28,7 +27,6 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-
     return range(start, stop, step)
     pass
 
@@ -78,7 +76,6 @@ def stubborn_asker(low, high):
     Ask for a number, and if the response is outside the bounds keep asking
     until you get a number that you think is OK
     """
-
     message = "Give me a number between {low} and {high}".format(low=low,
                                                                  high=high)
 
@@ -99,7 +96,6 @@ def not_number_rejector(message):
     "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-
     message = "Gizzard numbers please:"
 
     while True:
@@ -117,7 +113,6 @@ def super_asker(low, high):
     Combine stubborn_asker and not_number_rejector to make a function
     that does it all!
     """
-
     message = "Give me a number between {low} and {high}".format(low=low,
                                                                  high=high)
 

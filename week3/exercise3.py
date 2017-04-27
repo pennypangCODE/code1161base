@@ -15,7 +15,6 @@ def not_number_rejector(message):
     "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-
     message = "Gizzard numbers please:"
 
     while True:
