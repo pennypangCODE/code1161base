@@ -169,6 +169,7 @@ def square_koch(t, order, size):
         trace += square_koch(t, order-1, size/3)
         t.left(90)
         trace += square_koch(t, order-1, size/3)
+
     return str(order) + trace
     pass
 
