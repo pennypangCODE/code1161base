@@ -98,7 +98,12 @@ def best_letter_for_pets():
     import string
     the_alphabet = string.lowercase
 
-    for x in pet_filter():
+    pet_list = pet_filter(letter="a")
+    biggest = max(len(pet_list))
+    for letter in pet_list:
+        if letter == biggest:
+            return letter
+
 
 
 def make_filler_text_dictionary():
