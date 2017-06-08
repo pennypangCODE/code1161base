@@ -169,15 +169,25 @@ def fast_filler(number_of_words=200):
     into and out of the file. Be careful when you read it back in, it'll
     convert integer keys to strings.
     """
-    import requests
-    url = "http://www.setgetgo.com/randomword/get.php?len="
-    dictionary = {}
-    for i in range(3, 8):
-        res1 = requests.get(url + str(i)).text
-        res2 = requests.get(url + str(i)).text
-        res3 = requests.get(url + str(i)).text
-        dictionary[i] = [res1, res2, res3]
-
+    import os.path
+    os.path.isfile('dict_racey.words')
+    my_file = ("week8/dict_racey.words")
+    if my_file.isfile():
+        text = open("week8/dict_racey.words", "r").read()
+        done = random_filler_text(text)
+        return done
+    else:
+        import requests
+        url = "http://www.setgetgo.com/randomword/get.php?len="
+        dictionary = {}
+        for i in range(3, 8):
+            res1 = requests.get(url + str(i)).text
+            res2 = requests.get(url + str(i)).text
+            res3 = requests.get(url + str(i)).text
+            dictionary[i] = [res1, res2, res3]
+        f = open("week8/dict_racey.words", "w").write(dictionary)
+        done = random_filler_text(dictionary)
+        return done
 
 if __name__ == '__main__':
     print(greet())

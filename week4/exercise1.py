@@ -97,7 +97,7 @@ def wordy_pyramid():
     lengthWord = 3
     while lengthWord < 20:
         res = requests.get(url + str(lengthWord)).text
-        pyramid.append(str(res))
+        pyramid.append(res)
         lengthWord += 2
 
     lengthWord = 20
@@ -129,7 +129,6 @@ def wunderground():
     r = requests.get(url)
     the_json = json.loads(r.text)
     obs = the_json["current_observation"]
-    print(the_json)
 
     return {"state":           obs["display_location"]["state"],
             "latitude":        obs["observation_location"]["latitude"],
