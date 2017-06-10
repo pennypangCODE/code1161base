@@ -45,13 +45,7 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    listOfStars = []
-    for i in range(10):
-            listOfStars.append("*")
-
-    return listOfStars
-
-    pass
+    return map(lambda x: '*', range(10))
 
 
 def star_map():
@@ -62,16 +56,7 @@ def star_map():
     if it's even. Reuse the is odd function that you've already written.
     E.g.: ["!", "*", "!", "*", "!", "*", "!", "*", "!", "*"]
     """
-    def oddOrEven(givenNumber):
-        if is_odd(givenNumber):
-            return "*"
-        else:
-            return "!"
-
-    finalList = []
-    finalList = map(oddOrEven, range(10))
-    return finalList
-    pass
+    return(map(lambda x: '*' if is_odd(x) else '!', range(0, 10)))
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -82,12 +67,7 @@ def loops_1c(number_of_items=5, symbol="#"):
     a string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    symbolList = []
-    for i in range(number_of_items):
-        symbolList.append(symbol)
-
-    return symbolList
-    pass
+    return map(lambda x: symbol, range(number_of_items))
 
 
 def loops_2():
@@ -108,16 +88,7 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    listOfLists = []
-
-    for i in range(10):
-        listOfStars = []
-        for j in range(10):
-            listOfStars.append("*")
-        listOfLists.append(listOfStars)
-
-    return listOfLists
-    pass
+    return map(lambda x: map(lambda x: '*', range(10)), range(10))
 
 
 def loops_3():
@@ -142,15 +113,9 @@ def loops_3():
          so call str(number) to cast.
     """
     square = []
-
     for i in range(10):
-        row = []
-        for j in range(10):
-            row.append(str(i))
-        square.append(row)
-
+        square.append(map(lambda x: str(i), range(10)))
     return square
-    pass
 
 
 def loops_4():
@@ -168,16 +133,7 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    square = []
-
-    for i in range(10):
-        row = []
-        for j in range(10):
-            row.append(str(j))
-        square.append(row)
-
-    return square
-    pass
+    return map(lambda x: map(lambda x: str(x), range(10)), range(10))
 
 
 def loops_5():
