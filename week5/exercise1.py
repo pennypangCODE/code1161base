@@ -98,7 +98,7 @@ def get_triangle_facts(base, height, units="mm"):
 
 
 def tell_me_about_this_right_triangle(facts_dictionary):
-    """Return diagrammatic informatino with facts."""
+    """Return diagrammatic information with facts."""
     tall = """
             {height}
             |

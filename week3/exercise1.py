@@ -12,13 +12,7 @@ def loop_ranger(start, stop=None, step=1):
 
     Do this using any method apart from just using range()
     """
-    numberList = []
-
-    while start < stop:
-        numberList.append(start)
-        start = start + step
-
-    return numberList
+    return map(lambda x: x, range(start, stop, step))
 
 
 def lone_ranger(start, stop, step):
@@ -35,14 +29,7 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    numberList = []
-    i = start
-    step = 2
-
-    while i < stop:
-        numberList.append(i)
-        i = i + step
-    return numberList
+    return map(lambda x: x, range(start, stop, 2))
 
 
 def gene_krupa_range(start, stop, even_step, odd_step):
