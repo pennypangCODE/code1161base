@@ -46,16 +46,16 @@ def advancedGuessingGame():
 
     while not guessed:
         try:
-            guessedNumber = int(raw_input("guess a number: "))
+            guessedNumber = int(raw_input("Guess a number: "))
             print("{} is valid".format(guessedNumber))
             if (lowerBound <= guessedNumber) and (guessedNumber <= upperBound):
                 if guessedNumber == actualNumber:
-                    print("you got it!! It was {}".format(actualNumber))
+                    print("You got it!! It was {}".format(actualNumber))
                     guessed = True
                 elif guessedNumber < actualNumber:
-                    print("too small, try again ")
+                    print("Too small, try again ")
                 else:
-                    print("too big, try again   ")
+                    print("Too big, try again   ")
             else:
                 print("{} is not in the bound".format(guessed))
         except Exception as e:
