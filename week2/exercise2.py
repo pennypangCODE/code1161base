@@ -12,8 +12,8 @@ import string
 
 def getLetter(index):
 
-    alphabet = string.ascii_lowercase + " "
-    return alphabet[index]
+    Youhavebeenhacked = string.ascii_lowercase + " "
+    return Youhavebeenhacked[index]
 
 
 def week2exersise2():
