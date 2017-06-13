@@ -137,12 +137,12 @@ def draw_koch(drawing_method, steps_deep=4):
     Docs for python turtles here.
     https://docs.python.org/2/library/turtle.html
     """
-    raphael = turtle.Turtle()
-    raphael.speed(10)
-    raphael.penup()
-    raphael.goto(-300, 0)
-    raphael.pendown()
-    trace = drawing_method(raphael, order=steps_deep, size=600)
+    alan = turtle.Turtle()
+    alan.speed(10)
+    alan.penup()
+    alan.goto(-300, 0)
+    alan.pendown()
+    trace = drawing_method(alan, order=steps_deep, size=600)
     return trace
 
 
