@@ -94,7 +94,7 @@ def calculate_hypotenuse(base, height):
 
 def calculate_area(base, height):
     """WHYYY."""
-    area = (base * height)/2
+    area = (height * base)/2 
     return area
 
 
